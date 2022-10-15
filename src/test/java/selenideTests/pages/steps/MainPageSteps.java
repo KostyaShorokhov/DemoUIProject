@@ -1,4 +1,4 @@
-package pages;
+package selenideTests.pages.steps;
 
 import com.codeborne.selenide.Condition;
 

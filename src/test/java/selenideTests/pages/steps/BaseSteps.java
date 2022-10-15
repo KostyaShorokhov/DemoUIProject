@@ -1,11 +1,11 @@
-package pages;
+package selenideTests.pages.steps;
 
 import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selenide.open;
 @SuppressWarnings({"unchecked", "UnusedReturnValue"})
 public abstract class BaseSteps<T extends BaseSteps<T>>  {
-    public BaseSteps openPage(){
+    public T openPage(){
         open(baseUrl);
-        return this;
+        return (T) this;
     }
 }
