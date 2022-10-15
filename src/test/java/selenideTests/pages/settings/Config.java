@@ -13,6 +13,7 @@ import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
 public class Config {
     @BeforeAll
     public static void setUp(){
+        // тут прописывается конфигурация для браузера, по умолчанию ставить последняя версия GoogleChrome
         PropertyConfigurator.configure(System.getProperty("user.dir") + "/src/main/resources/log4j.properties");
         baseUrl = baseUrl();
     }
@@ -29,7 +30,8 @@ public class Config {
     }
 
     private static String baseUrl() {
-        String url = "https://www.drom.ru/"; // тут можешь задвать любой url сайта для теста в данном формате
+        // тут можешь задвать любой url сайта для теста в данном формате
+        String url = "https://www.drom.ru/";
     return url;
     }
 
